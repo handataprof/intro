@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+		/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Instructies</title>
+	</head>
+	<body>
+		<div class="d-flex justify-content-between align-items-center p-2" style="background-color: #e8f372">
+			<div class="justify-content-between align-items-center">
+				<img
+					src="https://github.com/handataprof/intro/blob/master/qlik-brand.png?raw=true"
+					width="56"
+					height="52"
+					class="d-inline-block"
+					alt=""
+				/>
+				<div class="d-inline-block" style="color: #59575b; font-size: 32px;">Academic Program</div>
+			</div>
+			<a
+				class="btn btn-lg text-white"
+				href="https://www.qlik.com/us/academicprogram"
+				target="_blank"
+				role="button"
+				style="background-color: #EF2D56; border: none;"
+				id="Qlik Word Data-Pro met Qlik s"
+				onclick="clickLog(this.id)"
+				>Schrijf je nu in
+			</a>
+		</div>
+		<div class="container-fluid">
+			<div class="row mt-3">
+				<div class="col">
+					<div class="p lead p-4">
+						Studenten en medewerkers kunnen zich inschrijven voor een gratis online cursus Data Analyse
+						(Business Analyst) en zich kwalificeren voor een gewild internationaal erkend certificaat.
+						Hiermee wordt je in de gelegenheid gesteld je analytische en datavaardigheden te verbeteren en
+						je voor te bereiden op een data-gedreven economie waarbij je gebruik maakt van toonaangevende,
+						geavanceerde tools voor gegevensanalyse.
+					</div>
+				</div>
+			</div>
+			<div class="row mt-5 p-4 justify-content-around">
+				<iframe
+					width="780"
+					height="439"
+					src="https://www.youtube.com/embed/RB-O4nAMTAI"
+					frameborder="0"
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen
+				></iframe>
+			</div>
+			<div class="row mt-5 p-4 justify-content-around">
+				<a
+					class="btn btn-lg mt-auto w-50 text-truncate"
+					href="https://qcc.qlik.com/course/view.php?id=931"
+					target="_blank"
+					role="button"
+					style="border-color: #EF2D56; color: #EF2D56;"
+					>Bekijk het cursusmateriaal
+				</a>
+			</div>
+			<div class="row mt-5 p-4 justify-content-around">
+				<div class="col-6 d-flex flex-column">
+					<div class="mb-3">
+						<div class="h4">
+							De voordelen
+						</div>
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item blockquote">
+								Je voegt iets waardevols toe aan je curriculum
+							</li>
+							<li class="list-group-item blockquote">
+								De online leeromgeving is altijd en overal beschikbaar
+							</li>
+							<li class="list-group-item blockquote">
+								Er is geen vast startmoment
+							</li>
+							<li class="list-group-item blockquote">
+								Bij succesvolle afronding, krijg je een officiëel certificaat
+							</li>
+							<li class="list-group-item blockquote"></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-5 d-flex flex-column">
+					<div class="mb-1">
+						<div class="h4">
+							Instructies
+						</div>
+						<div class="p">
+							De studiebelasting is gemiddeld 66 uur. Afhankelijk van je ervaring kan dit in sommige
+							gevallen hoger uitvallen. Het online examen duur 1 uur en 15 minuten en bestaat uit 40
+							multiple- choice vragen (je moet 70% halen).
+						</div>
+						<br />
+						<div class="p">
+							Bij het inschrijven wordt gevraagd om een foto van de collegepas mee te sturen. Ze kunnen zo
+							verifiëren dat je van de HAN bent (en dus alles gratis is) en kunnen ze je certificaat van
+							de juiste namen voorzien. Heb je hier moeite mee dan kun je de foto afplakken.
+						</div>
+						<br />
+						<div class="p">
+							Stuur een email naar
+							<a href="mailto:john.smits@han.nl?Subject=Deelnam%20Qlik%20Academic%20Program" target="_top"
+								>john.smits@han.nl</a
+							>
+							als je vragen of opmerkingen hebt.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script>
+			function clickLog(clicked_id) {
+				let item = clicked_id;
+				url = 'https:' + '//us-central1-clicklogs-29132.cloudfunctions.net/addClicks?item=' + item;
+				var request = new XMLHttpRequest();
+				request.open('GET', url);
+				request.send();
+				console.log(item);
+			}
+		</script>
+	</body>
+</html>
